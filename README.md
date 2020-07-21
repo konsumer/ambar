@@ -1,6 +1,30 @@
 [![Version](https://img.shields.io/badge/Version-v2.1.19-brightgreen.svg)](https://ambar.cloud)
 [![License](https://img.shields.io/badge/License-MIT-blue.svg)](https://github.com/RD17/ambar/blob/master/License.txt)
 
+This is a fork of [ambar](https://github.com/RD17/ambar), with a purpose of being easy to setup for free.
+
+Initially, I will just get it all building in docker-compose form local Docker files, but eventually I'd like to host everything on docker-hub, and use more upstream containers, so it can be more easily distributed.
+
+You will need a .env file with these environment variables:
+
+```
+# where do you keep your database data-files?
+dataPath="./data"
+
+# language for indexer: English ambar_en, Russian ambar_ru, German ambar_de, Italian ambar_it, Polish ambar_pl, Chinese ambar_cn, CJK ambar_cjk
+langAnalyzer="ambar_en"
+
+# the IP address of your Ambar server.
+ambarHostIpAddress="127.0.0.1"
+
+# desired name for your crawler (only lowercase latin letters and dashes are supported).
+crawlerName="blueleaks"
+
+# path to a local folder to be crawled
+pathToCrawl="./blueleaks"
+```
+
+
 :mag: Ambar: Document Search Engine
 ================================
 
